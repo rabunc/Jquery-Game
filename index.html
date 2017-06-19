@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Poiret+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -11,10 +12,61 @@
 </head>
 
 <body>
-    <div class= "container">
-        <div class= "jumbotron">
+    <div class="container">
+
+        <!--Game header-->
+        <div class="jumbotron">
             <h1>Crystals Collector!</h1>
         </div>
+
+        <!--Game instructions-->
+        <div class="panel panel-default">
+            <div class="panel-heading">Rules to the Game</div>
+            <div class="panel-body">
+                You will be given a random number at the start of the game.
+                <br><br>
+                There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                <br><br>
+                You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.
+                <br><br>
+                The value of each crystal is hidden from you until you click on it.
+                <br><br>
+                Each time when the game starts, the game will change the values of each crystal.
+            </div>
+        </div>
+
+        <!--Final number area-->
+        <div id="final-number-area">39</div>
+
+        <!--Wins / losses area-->
+        <div id="wins-losses-area">
+            <!--Wins line-->
+            <span id="wins-line">Wins: 0</span>
+            <br>
+            <br>
+            <!--Losses line-->
+            <span id="losses-line">Losses: 0</span>
+        </div>
+
+        <!--Crystals area-->
+        <div id="crystals-area">
+            <ul id="gems-group">
+                <li id="diamond"><img src="assets/images/diamond.png"></li>
+                <li id="emerald"><img src="assets/images/emerald.png"></li>
+                <li id="ruby"><img src="assets/images/ruby.png"></li>
+                <li id="sapphire"><img src="assets/images/sapphire.png"></li>
+            </ul>
+        </div>
+
+
+        <!--Your total score area-->
+        <div class="panel panel-default" id="total-score-area">
+            <div class="panel-heading">Your total score is:</div>
+            <div class="panel-body" id="your-total-number">0</div>
+        </div>
+
+
+
     </div>
 </body>
 

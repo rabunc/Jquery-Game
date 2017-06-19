@@ -1,9 +1,62 @@
 body {
-    background-image: url("../images/whitediamond/whitediamond.png")
+    background-image: url("../images/whitediamond/whitediamond.png");
+    font-family: 'Poiret One', cursive;
+
 }
 
 .jumbotron {
     background-color: green;
     color: white;
     text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.panel-heading {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+div {
+    margin: 10px;
+}
+
+#final-number-area {
+    clear: both;
+    float: left;
+    width: 30%;
+    height: 150px;
+    background-color: green;
+    font: purple;
+    font-size: 60px;
+    padding: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#wins-losses-area {
+    float: left;
+    width: 15%;
+    height: 150px;
+    font: green;
+    background-color: gainsboro;
+    padding: 20px;
+}
+
+#crystals-area {
+    clear: both;
+}
+
+li {
+    float: left;
+    margin: 10px;
+    background-color: white;
+}
+
+#total-score-area {
+    clear: both;
+    width: 50%;
+}
+
+#your-total-number {
+    font-size: 50px;
 }
