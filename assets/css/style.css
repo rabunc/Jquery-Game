@@ -1,0 +1,9 @@
+body {
+    background-image: url("../images/whitediamond/whitediamond.png")
+}
+
+.jumbotron {
+    background-color: green;
+    color: white;
+    text-align: center;
+}
