@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#final-number").append(finalNumberSpan);
     }
 
-    // Initialize gem values
+    // Randomize gem values
     function randomizeGemValues() {
         diamondValue = Math.floor(Math.random() * 12) + 1;
         emeraldValue = Math.floor(Math.random() * 12) + 1;
@@ -91,3 +91,4 @@ $(document).ready(function () {
     });
 
 });
+
