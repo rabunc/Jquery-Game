@@ -20,16 +20,19 @@ $(document).ready(function () {
     }
 
     // Initialize gem values
-    diamondValue = Math.floor(Math.random() * 12) + 1;
-    emeraldValue = Math.floor(Math.random() * 12) + 1;
-    rubyValue = Math.floor(Math.random() * 12) + 1;
-    sapphireValue = Math.floor(Math.random() * 12) + 1;
+    function randomizeGemValues() {
+        diamondValue = Math.floor(Math.random() * 12) + 1;
+        emeraldValue = Math.floor(Math.random() * 12) + 1;
+        rubyValue = Math.floor(Math.random() * 12) + 1;
+        sapphireValue = Math.floor(Math.random() * 12) + 1;
+    }
 
     function resetGame() {
         $("#final-number").empty();
         initializeFinalNumber();
         totalScore = 0;
         $("#your-total-number").text(totalScore);
+        randomizeGemValues();
     }
 
     function evaluateGameStatus() {
@@ -43,7 +46,7 @@ $(document).ready(function () {
             alert("Congratulations! You win!");
             resetGame();
         } else if (totalScore > finalNumber) {
-            losses +=1;
+            losses += 1;
             // Incrememnt Losses: span
             var lossesSpan = $("<span>");
             $(lossesSpan).text(losses);
@@ -56,6 +59,7 @@ $(document).ready(function () {
 
     // Run game
     initializeFinalNumber();
+    randomizeGemValues();
 
     // Setup click listeners
     // On diamond click, add diamond value to total score
