@@ -35,6 +35,14 @@ $(document).ready(function () {
         randomizeGemValues();
     }
 
+    function announceWin() {
+        alert("Congratulations! You win!");
+    }
+
+    function announceLoss() {
+        alert("You went over the number! You lose!");
+    }
+
     function evaluateGameStatus() {
         if (totalScore == finalNumber) {
             wins += 1;
@@ -43,7 +51,7 @@ $(document).ready(function () {
             $(winsSpan).text(wins);
             $("#wins-count").empty();
             $("#wins-count").append(winsSpan);
-            alert("Congratulations! You win!");
+            setTimeout(announceWin, 0);
             resetGame();
         } else if (totalScore > finalNumber) {
             losses += 1;
@@ -52,7 +60,7 @@ $(document).ready(function () {
             $(lossesSpan).text(losses);
             $("#losses-count").empty();
             $("#losses-count").append(lossesSpan);
-            alert("You went over the number! You lose!");
+            setTimeout(announceLoss, 0);
             resetGame();
         }
     }
