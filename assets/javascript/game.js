@@ -37,10 +37,13 @@ $(document).ready(function () {
 
     function announceWin() {
         alert("Congratulations! You win!");
+        resetGame();
+
     }
 
     function announceLoss() {
         alert("You went over the number! You lose!");
+        resetGame();
     }
 
     function evaluateGameStatus() {
@@ -52,7 +55,6 @@ $(document).ready(function () {
             $("#wins-count").empty();
             $("#wins-count").append(winsSpan);
             setTimeout(announceWin, 0);
-            resetGame();
         } else if (totalScore > finalNumber) {
             losses += 1;
             // Incrememnt Losses: span
@@ -61,7 +63,7 @@ $(document).ready(function () {
             $("#losses-count").empty();
             $("#losses-count").append(lossesSpan);
             setTimeout(announceLoss, 0);
-            resetGame();
+            
         }
     }
 
